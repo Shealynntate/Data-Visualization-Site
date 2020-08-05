@@ -1,0 +1,18 @@
+<mat-card>
+	<mat-card-header>
+			<div mat-card-avatar class='profile-pic'><img [src]='getImgURL()'/></div>
+			<mat-card-title>@{{getHandle()}}</mat-card-title>
+			<mat-card-subtitle><span>{{getName()}}</span> {{getFollowers()}} followers</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+		<date-slider [profile]='data' (change)='onDateChange()'></date-slider>
+		<div class='profile-container'>
+			<daytime-chart [profileData]='data'></daytime-chart>
+			<hashtag-count-chart [profileData]='data'></hashtag-count-chart>
+			<sponsored-chart [profileData]='data'></sponsored-chart>
+			<div>
+				<post-likes-chart [profileData]='data'></post-likes-chart>
+			</div>
+		</div>
+	</mat-card-content>
+</mat-card>

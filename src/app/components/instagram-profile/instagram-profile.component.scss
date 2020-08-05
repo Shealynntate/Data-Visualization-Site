@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+:host {
+	.mat-card {
+		background-color: transparent;
+
+		.mat-card-header {
+			padding-top: 0rem;
+			padding-bottom: 1rem;
+			justify-content: left;
+
+			.profile-pic {
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				
+				img {
+					width: 100px;
+					height: 100px;
+					border-radius: 50%;
+				}
+			}
+		}
+
+		.mat-card-content {
+			text-align: center;
+		
+			.profile-container {
+				margin: auto;
+				max-width: 1400px;
+				
+				hashtag-count-chart,
+				daytime-chart,
+				sponsored-chart {
+					display: inline-block;
+					width: 33%;
+					min-width: 200px;
+				}
+			
+				post-likes-chart {
+					display: inline-block;
+					width: 99%;
+					min-width: 400px;
+				}
+			}
+		}
+	}
+
+	mat-card-title {
+		font-size: 2rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		margin-left: 3rem;
+	}
+
+	mat-card-subtitle {
+		margin-left: 3rem;
+
+		span {
+			padding-right: 0.5rem;
+			color: $foreground-fade-color;
+		}
+	}
+
+	date-slider {
+		width: 100%;
+		max-width: 1400px;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		box-sizing: border-box;
+		margin: auto;
+		margin-bottom: 1rem;
+	}
+}

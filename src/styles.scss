@@ -1,0 +1,38 @@
+$bg00-color: #080808;
+$bg01-color: #121212;
+$bg02-color: #1D1D1D;
+$bg03-color: #212121;
+$foreground-fade-color: rgba(255, 255, 255, 0.3);
+$foreground-color: rgba(255, 255, 255, 0.54);
+$foreground-highlight-color: rgba(255, 255, 255, 0.8);
+$accentStroke: rgb(0, 255, 255);
+$accentFill: rgba(0, 255, 255, 0.1);
+
+html,
+html body {
+	background-color: $bg00-color;
+	color: $foreground-color;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Angular Material
+.mat-card {
+	background-color: $bg01-color;
+	color: $foreground-color;
+	margin: 0.5rem;
+}
+
+.mat-card .mat-card-header,
+.mat-card .mat-card-subtitle {
+	justify-content: center;
+	color: $foreground-color;
+}
+
+// Special Classes
+.hide {
+	display: none !important;
+	opacity: 0;
+	transition: all 0.4s ease-in;
+}

@@ -1,0 +1,51 @@
+@import '../../../styles.scss';
+
+:host {
+
+	&>div {
+		display: flex;
+	}
+
+	.narrow-card {
+		flex-grow: 0;
+		max-width: 250px;
+
+		.mat-expansion-panel {
+			color: $foreground-color;
+			background: none;
+
+			.mat-expansion-panel-header-title {
+				color: $foreground-color;
+				font-size: 1.25rem;
+			}
+
+			::ng-deep .mat-expansion-panel-body {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
+		::ng-deep .mat-list-base .mat-list-option,
+		::ng-deep .mat-list-base .mat-list-item {
+			color: $foreground-color;
+
+			.mat-list-text {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			.followers {
+				color: $foreground-fade-color;
+				padding-left: 1.5rem;
+			}
+		}
+	}
+
+	.wide-card {
+		flex-grow: 1;
+		flex-shrink: 1;
+		min-width: 700px;
+		vertical-align: top;
+	}
+
+}

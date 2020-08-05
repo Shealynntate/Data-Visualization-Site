@@ -1,0 +1,5 @@
+
+dist/*
+node_modules/*
+extra/credentials.json
+extra/instagram_config.json

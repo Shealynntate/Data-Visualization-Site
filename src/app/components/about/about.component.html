@@ -1,0 +1,36 @@
+<mat-card>
+	<mat-card-content>
+		<div class='top-section'>
+			This project was designed to collect, store, and display Instagram data in a fun and interactive way.
+			I used several programming languages and tools to make this happen, which I describe below.
+			For anyone interested, the full source code is available on my <a href='https://github.com/Shealynntate'>Github</a>.
+		</div>
+			<div class='step-logo'><img src='../../assets/python-logo.png'/></div>
+		<div class='section'>
+			<div class='description'>
+				The data mining was done with a python script. It uses the <a href='https://instaloader.github.io/index.html'>Instaloader</a> library to scrape data from Instagram.
+				A config file provides account handles to search for. The script then checks the database for that handle and looks up the date of the last post scraped for that account. Then it collects data on all posts from that date up to the present.
+				It's designed to be re-run as often as you want to keep the data up to date. 
+				However, the process can take quite awhile for a new account simply because the queries to Instagram have to be artificially delayed to comply with their policies on bots and data mining.
+			</div>
+		</div>
+		<div class='step-logo'><img src='../../assets/firebase-logo.png'/></div>
+		<div class='section'>
+			<div class='description'>
+				I used Google's Cloud Firestore to store all of the mined data. 
+				The database consists of a top level collection of profile documents, each of which has a sub-collection for post data.
+				A profile document contains basic info such as a profile pic and follower count. 
+				For the posts sub-collections, since Firebase's usage metrics are based around reads and writes rather than total data stored,
+				I optimized for this by storing 300 posts worth of data per document. 
+				This way I don't incur hundreds or thousands of reads for every user visiting this site.
+			</div>
+		</div>
+		<div class='step-logo'><img src='../../assets/angular-logo.png'/></div>
+		<div class='section'>
+			<div class='description'>
+				This website was created in Angular to display the data in an engaging way, using the <a href='https://www.chartjs.org/'>chart.js</a> library to generate graphs. 
+				I thought it would be a fun challenge to make the data more interactive, so I created the top date slider to allow a user to change the start and end date of the data they're viewing. This did pose a challenge though since all computations have to be done on-the-fly and re-computed whenever the user changes the date range.
+			</div>
+		</div>
+	</mat-card-content>
+</mat-card>

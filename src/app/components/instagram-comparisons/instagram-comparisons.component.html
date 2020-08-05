@@ -1,0 +1,32 @@
+<div [class.hide]='selectedProfile'>
+	<mat-card class='narrow-card'>
+	    <mat-card-content>
+	    	<mat-accordion>
+		    	<mat-expansion-panel *ngFor='let category of getCategoryList()' 
+		    		(opened)='onSelectCategory(category)'
+		    		[expanded]='selectedCategory === category' hideToggle>
+		    		<mat-expansion-panel-header>
+		    			<mat-panel-title>{{category}}</mat-panel-title>
+		    		</mat-expansion-panel-header>
+			       		<mat-selection-list [multiple]='false' (selectionChange)='onProfileSelect($event)' #profileList>
+				            <mat-list-option *ngFor='let profile of getProfilesInCategory(category)' [value]='profile'>
+				                <div class='handle'>@{{profile.handle}}</div>
+				                <div class='followers'>{{profile.followersToString()}}</div>
+				            </mat-list-option>
+				        </mat-selection-list>
+			    </mat-expansion-panel>
+			</mat-accordion>
+	    </mat-card-content>
+	</mat-card>
+	<mat-card class='wide-card'>
+		<mat-card-content>
+			<date-slider [profile]='selectedCategoryProfiles ? selectedCategoryProfiles[0] : null' (change)='onDateChange()'>
+			</date-slider>
+			<post-likes-comparison-chart [profilesData]='selectedCategoryProfiles'>
+			</post-likes-comparison-chart>
+		</mat-card-content>
+	</mat-card>
+</div>
+
+<!-- Individual Profile View -->
+<instagram-profile [class.hide]='!selectedProfile' [data]='selectedProfile'></instagram-profile>

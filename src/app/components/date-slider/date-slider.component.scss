@@ -1,0 +1,45 @@
+@import '../../../styles.scss';
+
+:host {
+	::ng-deep .ng5-slider {
+		.ng5-slider-bubble {
+			font-size: 0.75rem;
+			color: $foreground-color !important;
+		}
+
+		.ng5-slider-pointer {
+			width: 20px;
+			height: 20px;
+			top: -8.75px;
+			border: 1px solid $accentStroke;
+			background-color: $accentFill;
+
+			&:after {
+				top: 6px;
+				left: 6px;
+				background-color: $accentStroke;
+			}
+
+			&:focus {
+				outline: none;
+				border: 1px solid white;
+
+				&:after {
+					background-color: white;
+				}
+			}
+		}
+
+		.ng5-slider-bar {
+			background-color: $accentFill;
+		}
+
+		.ng5-slider-selection {
+			background-color: $accentStroke;
+
+			&:focus {
+				background-color: white;
+			}
+		}
+	}
+}

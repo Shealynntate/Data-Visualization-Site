@@ -1,0 +1,8 @@
+@import '../../../styles.scss';
+
+:host {
+	.mat-card-header {
+		background-color: $bg01-color;
+		padding-bottom: 1rem;
+	}
+}

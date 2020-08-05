@@ -1,0 +1,65 @@
+@import '../../../styles.scss';
+
+:host {
+	mat-card {
+		margin-top: 0;
+		margin-left: 0;
+		margin-right: 0;
+		// background-color: $bg00-color;
+		border-bottom: 8px solid $bg03-color;
+	}
+	
+	.home-button-container {
+		display: inline-block;
+	}
+
+	.title-container {
+		display: inline-block;
+		margin-left: 2.5rem;
+		font-size: 2.25rem;
+		font-weight: 300;
+		position: relative;
+		top: -16px;
+	}
+
+	.home-button {
+		height: 64px;
+		width: 64px;
+		background-color: transparent;
+		border: none;
+		padding-left: 2rem;
+		cursor: pointer;
+		
+		&:focus {
+			outline: none;
+		}
+
+		mat-icon {
+			width: 60px;
+			height: 60px;
+			fill: $foreground-color;
+		}
+
+		mat-icon:hover {
+			fill: $foreground-highlight-color;
+		}
+
+		mat-icon:active {
+			fill: white;
+		}
+	}
+
+	.about-button-container {
+		position: absolute;
+		right: 3rem;
+		bottom: 1rem;
+
+		button {
+			color: $foreground-color;
+			font-size: 1.25rem;
+			background: none;
+			border: none;
+			vertical-align: text-bottom;
+		}
+	}
+}
