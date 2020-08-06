@@ -30,12 +30,6 @@ export class InstagramService {
 		)));
 		
 		return profiles$;
-
-		// return this.http.get<ProfileData[]>(this.dataUrl)
-		// 	.pipe(map(data => data.map(entry => 
-		// 		(new ProfileData).deserialize(entry)
-		// 	)));
-			// .pipe(catchError(this.handleError('getHeroes', [])));
 	}
 
 	getPosts(profile: ProfileData): Observable<void> {
