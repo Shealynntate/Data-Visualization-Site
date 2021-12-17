@@ -1,4 +1,7 @@
-import os, sys, json, time, requests, pytz, firebase_admin
+#!/usr/bin/env python3
+
+import os, sys, json, time, pytz, firebase_admin
+import requests
 from firebase_admin import credentials, firestore
 from instaloader import Instaloader, Profile
 from datetime import datetime, date
